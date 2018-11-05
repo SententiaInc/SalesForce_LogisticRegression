@@ -37,8 +37,7 @@ IF( pcBeta * priorCustomer__c, 1, 0) ))
 IF( wcBeta * wasCalled__c, 1, 0) +
 IF( raBeta *  receivedAd__c, 1, 0) + 
 IF( pcBeta * priorCustomer__c, 1, 0) )))
-)
-* 100`
+)`
 
 
 ![alt text](https://github.com/SententiaInc/Salesforce_LogisticRegression/blob/master/ColumnDef.PNG "Propensity Modeling")
