@@ -26,7 +26,7 @@ After you run the regression - you will be given the computed coeffecients (e.g.
 Then create a new formula field in salesforce (number) - and update it with similar code below to allow Salesforce to generate real-time predictive output. 
 
 
-`((EXP(
+``((EXP(
 Beta +
 IF( wcBeta * wasCalled__c, 1, 0) +
 IF( raBeta *  receivedAd__c, 1, 0) + 
@@ -37,7 +37,7 @@ IF( pcBeta * priorCustomer__c, 1, 0) ))
 IF( wcBeta * wasCalled__c, 1, 0) +
 IF( raBeta *  receivedAd__c, 1, 0) + 
 IF( pcBeta * priorCustomer__c, 1, 0) )))
-)`
+)``
 
 
 ![alt text](https://github.com/SententiaInc/Salesforce_LogisticRegression/blob/master/ColumnDef.PNG "Propensity Modeling")
