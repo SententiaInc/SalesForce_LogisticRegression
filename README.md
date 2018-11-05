@@ -26,7 +26,9 @@ After you run the regression - you will be given the computed coeffecients (e.g.
 Then create a new formula field in salesforce (number) - and update it with similar code below to allow Salesforce to generate real-time predictive output. 
 
 
-``((EXP(
+CODE: 
+
+((EXP(
 Beta +
 IF( wcBeta * wasCalled__c, 1, 0) +
 IF( raBeta *  receivedAd__c, 1, 0) + 
@@ -37,7 +39,9 @@ IF( pcBeta * priorCustomer__c, 1, 0) ))
 IF( wcBeta * wasCalled__c, 1, 0) +
 IF( raBeta *  receivedAd__c, 1, 0) + 
 IF( pcBeta * priorCustomer__c, 1, 0) )))
-)``
+)
+
+NOTE: Please note - I mentioned atribute coefficient contribution being about equal to the percentage.   You can also see the amount change when you modify a live record (e.g. what the change in output is).   This generally allows you to see how much impact a particular attrubute has on client engagement.  Again - this is a very simple example on how to create dynamic fields and is not a comprehensive overview of logistic regression / propensity modeling.
 
 
 ![alt text](https://github.com/SententiaInc/Salesforce_LogisticRegression/blob/master/ColumnDef.PNG "Propensity Modeling")
