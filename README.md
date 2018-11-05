@@ -13,10 +13,18 @@ If you would like to leverage your past data to predict future events read on or
 
 ![alt text](https://github.com/SententiaInc/Salesforce_LogisticRegression/blob/master/SalesforceExample.PNG "Propensity Modeling")
 
-Historical data must be structured in the following manner. 
-
+In order to do the above you must have enough historical data and get it structured in the following manner. 
 
 ![alt text](https://github.com/SententiaInc/Salesforce_LogisticRegression/blob/master/sampledata.PNG "Propensity Modeling")
+
+After you have the data - you will need to run "Logisitic Regression" in Excell (usually you need the data analysis toolpack to do so). 
+
+There are plenty of videos out there to do so. 
+
+After you run the regression - you will be given the computed coeffecients (e.g. Beta,wcBeta,raBeta,pcBeta below) and you will need to update salesforce similar to the example code below.  (Your data will vary, and your attributes will have different names). 
+
+Then create a new formula field in salesforce (number) - and update it with similar code below to allow Salesforce to generate real-time predictive output. 
+
 
 `((EXP(
 Beta +
